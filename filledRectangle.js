@@ -1,18 +1,18 @@
-const lineOfPattern = function (count, symbol) {
+const lineOfPattern = function(count, symbol) {
   return symbol.repeat(count);
 }
 
-const filledRectangle = function (height, width) {
+const filledRectangle = function(height, width) {
   let pattern = "";
-  for (i = 1; i <= height;i++){
+  for (i = height; i > 0 && width !== 0; i--){
     pattern = pattern + lineOfPattern(width, "*") + "\n";
   }
   return pattern;
 }
 
-const main = function () {
-  const height = 15;
-  const width = 4;
+const main = function() {
+  const height = 3;
+  const width = 0;
   console.log(filledRectangle(height, width));
 }
 
